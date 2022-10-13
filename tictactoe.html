@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gregs Gambit</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="greg.css" />
+        <script type="text/javascript">
+                
+
+//variables for square selections 
+var choice_1 = "1"; 
+var choice_2 = "2"; 
+var choice_3 = "3"; 
+var choice_4 = "4"; 
+var choice_5 = "5";
+var choice_6 = "6";
+var choice_7 = "7";
+var choice_8 = "8";
+var choice_9 = "9";
+
+
+
+//ASCII lowercase x = 120 , ASCII lowercase o = 111
+
+function ticTacToe(square_choice) //function contains if statements testing for sqaure choice, and then pulling value by id,convert to lower if evaluated true
+{
+	if(square_choice == 'box1') 
+	{
+		choice_1 = document.getElementById(square_choice).value;
+		choice_1 = choice_1.toLowerCase();
+		choice_1 = choice_1.charCodeAt(1);
+	} 
+	else if (square_choice == 'box2') 
+	
+	{
+		choice_2 = document.getElementById(square_choice).value;	
+		choice_2 = choice_2.toLowerCase();
+		choice_2 = choice_2.charCodeAt(1);
+	} 
+	else if (square_choice == 'box3') 
+	{
+		choice_3 = document.getElementById(square_choice).value;
+		choice_3 = choice_3.toLowerCase();
+		choice_3 = choice_3.charCodeAt(1);
+	} 
+	else if (square_choice == 'box4') 
+	{
+		choice_4 = document.getElementById(square_choice).value;
+		choice_4 = choice_4.toLowerCase();
+		choice_4 = choice_4.charCodeAt(1);
+	} 
+	else if (square_choice == 'box5') 
+	{
+		choice_5 = document.getElementById(square_choice).value;
+		choice_5 = choice_5.toLowerCase();
+		choice_5 = choice_5.charCodeAt(1);
+	} 
+	else if (square_choice == 'box6') 
+	{
+		choice_6 = document.getElementById(square_choice).value;
+		choice_6 = choice_6.toLowerCase();
+		choice_6 = choice_6.charCodeAt(1);
+	} 
+	else if (square_choice == 'box7') 
+	{
+		choice_7 = document.getElementById(square_choice).value;
+		choice_7 = choice_7.toLowerCase();
+		choice_7 = choice_7.charCodeAt(1);
+	} 
+	else if (square_choice == 'box8') 
+	{
+		choice_8 = document.getElementById(square_choice).value;
+		choice_8 = choice_8.toLowerCase();
+		choice_8 = choice_8.charCodeAt(1);
+	} 
+	else if (square_choice == 'box9') 
+	{
+		choice_9 = document.getElementById(square_choice).value;
+		choice_9 = choice_9.toLowerCase();
+		choice_9 = choice_9.charCodeAt(1);
+	}
+
+
+	
+	
+	
+//Use ASCII values to indicate selection 
+//lowercase x = 120 , ASCII lowercase o = 111
+//X:#FFFF00 - yellow
+//O:#FFA500 - orange
+//Color changes according to if statements evaluations
+
+
+	if(choice_1 == '120' && square_choice == 'box1') 
+		{
+			document.getElementById('box1').style.background = "#FFFF00";
+		} 
+		else if (choice_1 == '111' && square_choice == 'box1') 
+		{
+			document.getElementById('box1').style.background = "#FFA500";	
+		} 
+		else if (choice_2 == '120' && square_choice == 'box2') 
+		{
+			document.getElementById('box2').style.background = "#FFFF00";
+		} 
+		else if (choice_2 == '111' && square_choice == 'box2') 
+		{
+			document.getElementById('box2').style.background = "#FFA500";	
+		} 
+		else if (choice_3 == '120' && square_choice == 'box3') 
+		{
+			document.getElementById('box3').style.background = "#FFFF00";
+		} 
+		else if (choice_3 == '111' && square_choice == 'box3') 
+		{
+			document.getElementById('box3').style.background = "#FFA500";	
+		} 
+		else if(choice_4 == '120' && square_choice == 'box4') 
+		{
+			document.getElementById('box4').style.background = "#FFFF00";
+		} 
+		else if (choice_4 == '111' && square_choice == 'box4') 
+		{
+			document.getElementById('box4').style.background = "#FFA500";	
+		} 
+		else if (choice_5 == '120' && square_choice == 'box5') 
+		{
+			document.getElementById('box5').style.background = "#FFFF00";
+		} 
+		else if (choice_5 == '111' && square_choice == 'box5') 
+		{
+			document.getElementById('box5').style.background = "#FFA500";	
+		} 
+		else if (choice_6 == '120' && square_choice == 'box6') 
+		{
+			document.getElementById('box6').style.background = "#FFFF00";
+		} 
+		else if (choice_6 == '111' && square_choice == 'box6') 
+		{
+			document.getElementById('box6').style.background = "#FFA500";	
+		} 
+		else if (choice_7 == '120' && square_choice == 'box7') 
+		{
+			document.getElementById('box7').style.background = "#FFFF00";
+		} 
+		else if (choice_7 == '111' && square_choice == 'box7') 
+		{
+			document.getElementById('box7').style.background = "#FFA500";	
+		} 
+		else if (choice_8 == '120' && square_choice == 'box8') 
+		{
+			document.getElementById('box8').style.background = "#FFFF00";
+		} 
+		else if (choice_8 == '111' && square_choice == 'box8') 
+		{
+			document.getElementById('box8').style.background = "#FFA500";	
+		} 
+		else if (choice_9 == '120' && square_choice == 'box9') 
+		{
+			document.getElementById('box9').style.background = "#FFFF00";
+		} 
+		else if (choice_9 == '111' && square_choice == 'box9') 
+		{
+			document.getElementById('box9').style.background = "#FFA500";	
+		}
+
+	
+
+//Use ASCII to test for winner of game based on different if conditions
+//ASCII lowercase x = 120 , ASCII lowercase o = 111
+
+	if ((choice_1 == choice_2) && (choice_2 == choice_3)) 
+	{
+	
+		if (choice_1 == '120' && choice_2 == '120' && choice_3 == '120') 
+		{
+			alert ("X is the winner!");
+        
+			
+		} 
+		
+		
+			else if (choice_1 == '111' && choice_2 == '111' && choice_3 == '111') 
+		{
+			alert("O is the winner!");
+		}
+	} 	
+	
+	
+	else if ((choice_4 == choice_5) && (choice_5 == choice_6)) 
+	{
+		if (choice_4 == '120' && choice_5 == '120' && choice_6 == '120') 
+		{
+			alert ("X is the winner!");
+		} 
+		else if (choice_4 == '111' && choice_5 == '111' && choice_6 == '111') 
+		{
+			alert("O is the winner!");
+		}
+	} 
+	else if ((choice_7 == choice_8) && (choice_8 == choice_9)) 
+	{
+		if (choice_7 == '120' && choice_8 == '120' && choice_9 == '120') 
+		{
+			alert ("X is the winner!");
+		} 
+		else if (choice_7 == '111' && choice_8 == '111' && choice_9 == '111') 
+		{
+			alert("O is the winner!");
+		}
+	} 
+	else if ((choice_1 == choice_4) && (choice_4 == choice_7)) 
+	{
+		if (choice_1 == '120' && choice_4 == '120' && choice_7 == '120') {
+			alert ("X is the winner!");
+		} 
+		else if (choice_1 == '111' && choice_4 == '111' && choice_7 == '111') 
+		{
+			alert("O is the winner!");
+		}
+	} 
+	else if ((choice_2 == choice_5) && (choice_5 == choice_8)) 
+	{
+		if (choice_2 == '120' && choice_5 == '120' && choice_8 == '120') {
+			alert ("X is the winner!");
+		} 
+		else if (choice_2 == '111' && choice_5 == '111' && choice_8 == '111') 
+		{
+			alert("O is the winner!");
+		}
+	} 
+	else if ((choice_3 == choice_6) && (choice_6 == choice_9)) 
+	{
+		if (choice_3 == '120' && choice_6 == '120' && choice_9 == '120') {
+			alert ("X is the winner!");
+		} 
+		else if (choice_3 == '111' && choice_6 == '111' && choice_9 == '111') {
+			alert("O is the winner!");
+		}
+	} 
+	else if ((choice_1 == choice_5) && (choice_5 == choice_9)) 
+	{
+		if (choice_1 == '120' && choice_5 == '120' && choice_9 == '120') {
+			alert ("X is the winner!");
+		} 
+		else if (choice_1 == '111' && choice_5 == '111' && choice_9 == '111') {
+			alert("O is the winner!");
+		}
+	} 
+	else if ((choice_3 == choice_5) && (choice_5 == choice_7)) 
+	{
+		if (choice_3 == '120' && choice_5 == '120' && choice_7 == '120') {
+			alert ("X is the winner!");
+		} 
+		else if (choice_3 == '111' && choice_5 == '111' && choice_7 == '111') {
+			alert("O is the winner!");
+            
+		}
+		
+	}
+
+}
+
+
+
+
+//function that resets squares to empty string and initializes choices
+function reset
+    (square1,square2,square3,square4,square5,square6,square7,square8,square9) 
+{
+    document.getElementById(square1).value = " ";
+    document.getElementById(square2).value = " ";
+    document.getElementById(square3).value = " ";
+    document.getElementById(square4).value = " ";
+    document.getElementById(square5).value = " ";
+    document.getElementById(square6).value = " ";
+    document.getElementById(square7).value = " ";
+    document.getElementById(square8).value = " ";
+    document.getElementById(square9).value = " ";	
+    choice_1 = "1"; choice_2 = "2";choice_3 = "3";
+    choice_4 = "4"; choice_5 = "5";choice_6 = "6";
+    choice_7 = "7"; choice_8 = "8"; choice_9 = "9";
+    
+    //for loop executing as many times as there is boxes,changing the backgound color back to white
+    for(i = 1; i <= 9; i++)  
+    {
+	   var square_choice = ("box" + i);
+	   document.getElementById(square_choice).style.background = "#f9f2fc";    // 
+}
+    
+}
+
+
+		
+</script>
+    </head>
+    <body onload="setup()">
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="greg.html">About Greg</a></li>
+                    <li><a href="play_games.html">Play a Game</a></li>
+                    <li><a href="sign.html">Sign in</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <h1 class="titlebanner">Gregs Maze</h1>
+            <div class="container">
+                <button type="button" onclick="location.href='play_games.html'" class="btn btn-header">Choose a game!</button>
+                <img src="images/superhero kid.jpg" max height="4%" max width="40%">
+                
+            </div>
+           
+        </header>
+        <section class="content-section container">
+           
+
+
+<h1><center><underline></underline><font color="#D65076">TicTacToe</font></center></h1>
+
+
+<h5><center>This game is for two players.  One player is yellow(X), and the other is orange (O). The goal is to get three boxse in a row (across,down,or diagonally). When you enter your letter into a box and click "GO!", the box will change to your color. The game ends when a player matches 3 colors or there is a tie. Press the "Play again" button to reroll the game.</center></h5>
+
+<center><table>
+<tbody><tr colspan="3"></tr>
+    <tr>
+        <td><center><input name="box1" size="5" maxlength="2" id="box1" value=" " type="text">
+            <button onclick="ticTacToe('box1');">GO!</button></center></td>
+			
+        <td><center><input name="box2" size="5" maxlength="2" id="box2" value=" " type="text">
+            <button onclick="ticTacToe('box2');">GO!</button></center></td>
+			
+        <td><center><input name="box3" size="5" maxlength="2" id="box3" value=" " type="text">
+            <button onclick="ticTacToe('box3');">GO!</button></center></td>
+    </tr>
+    <tr><td><center><input name="box4" size="5" maxlength="2" id="box4" value=" " type="text">
+            <button onclick="ticTacToe('box4');">GO!</button></center></td>
+			
+        <td><center><input name="box5" size="5" maxlength="2" id="box5" value=" " type="text">
+            <button onclick="ticTacToe('box5');">GO!</button></center></td>
+			
+        <td><center><input name="box6" size="5" maxlength="2" id="box6" value=" " type="text">
+            <button onclick="ticTacToe('box6');">GO!</button></center></td>
+    </tr>
+    <tr><td><center><input name="box7" size="5" maxlength="2" id="box7" value=" " type="text">
+            <button onclick="ticTacToe('box7');">GO!</button></center></td>
+			
+        <td><center><input name="box8" size="5" maxlength="2" id="box8" value=" " type="text">
+            <button onclick="ticTacToe('box8');">GO!</button></center></td>
+			
+        <td><center><input name="box9" size="5" maxlength="2" id="box9" value=" " type="text">
+            <button onclick="ticTacToe('box9');">GO!</button></center></td>
+    </tr>
+    <tr><td colspan="3"><center>
+            <input value="Play again!" 
+            onclick="reset('box1','box2','box3','box4','box5','box6','box7','box8','box9');" type="button">
+            </center>
+            </td>
+        </tr>
+        </tbody>
+        </table>	
+        </center>
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <a href="mailto:sturg1337@gmail.com">sturg1337@gmail.com</a>
+                <h3 class="band-name" >Gregs Gambit</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="Images/YouTube Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.spotify.com" target="_blank">
+                            <img src="Images/Spotify Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="Images/Facebook Logo.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

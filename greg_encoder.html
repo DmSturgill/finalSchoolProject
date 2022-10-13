@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gregs Gambit</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="greg.css" />
+        <script type="text/javascript">
+function encodeIt()
+{
+ 		 document.getElementById("message").innerHTML  = ("<h2>&nbsp;</h2>");
+		 //initialize variables
+    var msg = prompt("Enter your message."," ");
+    var newmsg = "";
+    var newCode = 0;
+    var upCaseCode = 155;
+    var lowCaseCode= 219;
+    var specialCode = 3;
+		 //the loop encodes each letter in the message string
+		 for (var j = 0; j < msg.length;j++)
+		 {    
+		  	 //check for upppercase letters and encode them
+			 if  ((msg.charCodeAt(j)>=65) && (msg.charCodeAt(j)<=90))
+                  {
+                    newcode =(upCaseCode -msg.charCodeAt(j));
+                  }
+			      else 
+			//check for lowercase letters and encode them
+				 if ((msg.charCodeAt(j)>=97) && (msg.charCodeAt(j)<=122))
+                     {
+                            newcode =(lowCaseCode -msg.charCodeAt(j));
+                        }
+				        else
+			//check for numbers and special characters and encode them
+					if ((msg.charCodeAt(j)>90) && (msg.charCodeAt(j)<=97 
+                        || (msg.charCodeAt(j) < 65)))
+                        {
+                            newcode =(msg.charCodeAt(j) + specialCode);
+                        }
+                        
+			//add each encoded character to the new message
+			  newmsg = newmsg + " " + String.fromCharCode(newcode);
+		 }
+		 //display the encoded message on the web page
+		 document.getElementById("secret").innerHTML =("<h2>" + newmsg + "</h2>");
+		 //decide if original message should be shown
+		 var choice = prompt("Do you want the original message to be displayed?Yes or no.", " ");
+    if ((choice.charAt(0)=='y')|| (choice.charAt(0) == 'Y'))
+        {
+            document.getElementById("message").innerHTML = ("<h2>" + msg + "</h2>");
+        }
+}
+</script>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="greg.html">About Greg</a></li>
+                    <li><a href="play_games.html">Play a Game</a></li>
+                    <li><a href="sign.html">Sign in</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <h1 class="titlebanner">Gregs Encoder</h1>
+            <div class="container">
+                <button type="button" onclick="location.href='play_games.html'" class="btn btn-header">Choose a game!</button>
+                <img src="images/superhero kid.jpg" max height="4%" max width="40%">
+                
+            </div>
+           
+        </header>
+        <section class="content-section container">
+            <h2 class="row">This is a website that features several games created with HTML and JavaScript</h2>
+            <div>
+             <h2>Write A Message and Encode It</h2>
+<p><input type="button" id="encode" value="Enter your message" onclick="encodeIt();" /></p>
+  <table cellpadding="2" width = "90%" align = "center" border="1">
+    <tr> <td align="center" id="secret"><p>encoded message</p></td> </tr> 
+	<tr> <td align="center" id="message">&nbsp;</td> </tr>  </table>
+            </div>
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <a href="mailto:sturg1337@gmail.com">sturg1337@gmail.com</a>
+                <h3 class="band-name" >Gregs Gambit</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="Images/YouTube Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.spotify.com" target="_blank">
+                            <img src="Images/Spotify Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="Images/Facebook Logo.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

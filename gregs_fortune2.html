@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gregs Gambit</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="greg.css" />
+        <script type="text/javascript">
+            
+    function generateFortune()
+{
+ 	
+	var num = 0;
+	
+	var fortune1 = "You will win 500$ plus in lottery this week.";
+	var fortune2 = "You will meet your soulmate this month";
+	var fortune3 = "You will get in A in this class";
+	var fortune4 = "You will have a good job in the future";
+	var fortune5 = "Good things will come your way with a newfound hobby";
+	var fortune6 = "You will recieve a raise";
+	var fortune7 = "You will have a great vacation later this year";
+	var fortune8 = "You will recieve a heartwarming gift this week";
+	var fortune9 = "Your car will break down this month";
+	var fortune10 = "The last exam you took recieved a bad grade. ";
+	
+	num = (Math.floor(Math.random() * 10)) + 1;
+	
+	switch(num)
+	{
+        case 1:
+            document.getElementById("content").innerHTML = fortune1;
+            break;
+        case 2:
+            document.getElementById("content").innerHTML = fortune2;
+            break;
+        case 3:
+            document.getElementById("content").innerHTML = fortune3;
+            break;
+        case 4:
+            document.getElementById("content").innerHTML = fortune4;
+            break;
+        case 5:
+            document.getElementById("content").innerHTML = fortune5;
+            break;
+        case 6:
+            document.getElementById("content").innerHTML = fortune6;
+            break;
+        case 7:
+            document.getElementById("content").innerHTML = fortune7;
+            break;
+        case 8:
+            document.getElementById("content").innerHTML = fortune8;
+            break;
+	   case 9:
+            document.getElementById("content").innerHTML = fortune9;
+            break;
+        case 10:
+            document.getElementById("content").innerHTML = fortune10;
+            break;
+    }
+}
+
+</script>
+    </head>
+    <body onload="setup()">
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="greg.html">About Greg</a></li>
+                    <li><a href="play_games.html">Play a Game</a></li>
+                    <li><a href="sign.html">Sign in</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <h1 class="titlebanner">Gregs Maze</h1>
+            <div class="container">
+                <button type="button" onclick="location.href='play_games.html'" class="btn btn-header">Choose a game!</button>
+                <img src="images/superhero kid.jpg" max height="4%" max width="40%">
+                
+            </div>
+           
+        </header>
+        <section class="content-section container">
+           
+
+
+
+
+
+
+ <img src="images/superhero.jpg" width="120" height="120" class="floatleft" />
+ <h1 id="logo"><em>Madame Vadoma can tell your Fortune!</em></h1>
+  
+<h2 align="center">Press the button to learn your fortune. </h2>
+
+<p>&nbsp;</p>
+<div id="nav">
+  <p><a href="index.html">Home</a>
+  <a href="greg.html">About Greg</a>
+  <a href="play_games.html">Play a Game</a>
+  <a href="sign.html">Sign In</a>
+  <a href="contact.html">Contact Us</a></p>
+</div>
+<div id="content">
+	 <p class="floatright">Madame Vadoma<br /><br />
+	 <img src ="images/madame.jpg" /></p>
+	 <p>&nbsp;</p>
+	 <input type="button" value = "Learn your fortune!" onclick="generateFortune();" />
+	 <p>&nbsp;
+    </p>
+    
+       
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <a href="mailto:sturg1337@gmail.com">sturg1337@gmail.com</a>
+                <h3 class="band-name" >Gregs Gambit</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="Images/YouTube Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.spotify.com" target="_blank">
+                            <img src="Images/Spotify Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="Images/Facebook Logo.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
